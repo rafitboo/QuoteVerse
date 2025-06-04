@@ -10,14 +10,17 @@
     "routes": [
         {
             "src": "/static/(.*)",
-            "dest": "/staticfiles/$1"
-        },
-        {
-            "handle": "filesystem"
+            "dest": "/static/$1"
         },
         {
             "src": "/(.*)",
-            "dest": "quotes/wsgi.py"
+            "dest": "/quotes/wsgi.py"
         }
-    ]
+    ],
+    "functions": {
+        "quotes/wsgi.py": {
+            "memory": 1024,
+            "maxDuration": 10
+        }
+    }
 }

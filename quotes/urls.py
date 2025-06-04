@@ -24,8 +24,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('get-quote/', views.get_random_quote, name='get_random_quote'),
-    path('test/', views.test_endpoint, name='test_endpoint'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+
+# Add static file handling
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('get-quote/', views.get_random_quote, name='get_random_quote'),
