@@ -67,7 +67,7 @@ class QuoteGenerator {
         
         setTimeout(() => {
             quoteText.textContent = quote.text;
-            quoteAuthor.textContent = `${quote.author}${quote.remaining ? ` • ${quote.remaining} quotes remaining` : ''}`;
+            quoteAuthor.textContent = quote.author;
             
             // Add enter animation
             quoteText.style.opacity = '1';
