@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from .models import Quote
 import random
 import os
+import json
 
 def home(request):
     return render(request, 'main/home.html')
@@ -23,3 +24,14 @@ def get_random_quote(request):
         'success': True,
         'quote': random_quote
     })
+
+def test_endpoint(request):
+    data = {
+        'status': 'ok',
+        'message': 'Server is running',
+        'path': request.path,
+        'method': request.method,
+        'is_secure': request.is_secure(),
+        'host': request.get_host(),
+    }
+    return JsonResponse(data)
