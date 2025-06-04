@@ -1,16 +1,27 @@
 {
-    "builds": [{
-        "src": "quotes/wsgi.py",
-        "use": "@vercel/python"
-    }],
+    "version": 2,
+    "builds": [
+        {
+            "src": "quotes/wsgi.py",
+            "use": "@vercel/python"
+        },
+        {
+            "src": "staticfiles/**",
+            "use": "@vercel/static"
+        }
+    ],
     "routes": [
         {
             "src": "/static/(.*)",
-            "dest": "/static/$1"
+            "dest": "/staticfiles/$1"
         },
         {
             "src": "/(.*)",
             "dest": "quotes/wsgi.py"
         }
-    ]
+    ],
+    "env": {
+        "DJANGO_SETTINGS_MODULE": "quotes.settings",
+        "PYTHONPATH": "."
+    }
 }
