@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteVerse - Random Quotes</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=ADLaM Display' rel='stylesheet'>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>QuoteVerse</h1>
+                <span class="tagline">by rafitboo</span>
+            </div>
+            <nav class="social-links">
+                <a href="https://github.com/rafitboo" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a> 
+                <a href="https://www.linkedin.com/in/rafiul-islam-a9406a24b" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://facebook.com/rafitboo" class="social-link" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com/rafitboo" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/rafitboo" class="social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="quote-card">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="quote-content">
+                    <p id="quote-text">Click the button below to discover inspiring quotes!</p>
+                </div>
+                <div class="quote-author">
+                    <p id="quote-author"> Welcome to QuoteVerse</p>
+                </div>
+                <div class="quote-actions">
+                    <button id="new-quote" class="btn-primary">
+                        <i class="fas fa-refresh"></i>
+                        <span>New Quote</span>
+                    </button>
+                    <button id="share-quote" class="btn-secondary" title="Share">
+                        <i class="fas fa-share"></i>
+                    </button>
+                    <button id="copy-quote" class="btn-secondary" title="Copy">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="/static/js/quotes.js"></script>
+</body>
+</html>
